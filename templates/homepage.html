@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<title>Pick a book</title>
+{% extends "layout.html" %}
+{% block content %}
+<div class="container" id=home >
+  <div class="w3-container">
+      <div class="w3-button w3-mobile" > 
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What bunsiness are you looking for?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      </div>
+</div>
+
+
+<!-- Navbar -->
+<div>
+  <div class="w3-top" style="background-color:#00B4CC;">
+      <a  href="/signout" class="w3-bar-item w3-button">Sign out</a>
+    <!-- Float links to the right. Hide them on small screens -->
+  
+    <div class="w3-right w3-hide-small">
+        <a href="#home" class="w3-bar-item w3-button">Home</a>
+      </div>
+      </div>
+  
+</div>
+{% endblock %}

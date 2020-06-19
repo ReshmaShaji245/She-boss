@@ -50,7 +50,7 @@ def register():
     session.clear()
     username=request.form.get("username")
     password=str(request.form.get("password"))
-    if len(password)>=6:
+    if len(password)<=6:
         alert='Password must be six characters. Please try another password.'
         return render_template("register.html",alert=alert)
     exsitusers=list(db.execute("SELECT username FROM users").fetchall())
@@ -66,5 +66,5 @@ def register():
         db.execute("INSERT INTO users (username, password) VALUES (:username, :password)",
               {"username": username, "password": password})
         db.commit()
-        return render_template("bookpage.html")
+        return render_template("homepage.html")
     return render_template("register.html")
