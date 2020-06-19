@@ -68,3 +68,8 @@ def register():
         db.commit()
         return render_template("homepage.html")
     return render_template("register.html")
+
+@app.route("/signout")
+def signout():
+    session.clear()
+    return render_template("index.html")
