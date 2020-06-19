@@ -38,7 +38,7 @@ def check():
     print(username,password)
   
     if (username,password) in exsitusers:
-             return render_template("bookpage.html")
+             return render_template("homepage.html")
     if username!=None:
         alert="Wrong Username or Password. Please try again."
         return render_template("index.html", alert=alert)
