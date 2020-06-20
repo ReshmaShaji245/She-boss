@@ -1,32 +1,57 @@
-<link rel="stylesheet" href="/static/style.css">
+<!DOCTYPE html>
 
-<title>Pick a book</title>
-{% extends "layout.html" %}
-{% block content %}
-<div class="container" id=home >
-  <div class="w3-container">
-      <div class="w3-button w3-mobile" > 
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="What bunsiness are you looking for?">
-           <button type="submit" class="searchButton">
-             <i class="fa fa-search"></i>
-          </button>
-        </div>
-      </div>
-      </div>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SheBoss</title>
+  <meta name="description" content="SummerHacks: SheBoss">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Russo+One&family=Saira+Condensed&display=swap" rel="stylesheet">
 
+</head>
 
-<!-- Navbar -->
-<div>
-  <div class="w3-top" style="background-color:#00B4CC;">
-      <a  href="/signout" class="w3-bar-item w3-button">Sign out</a>
-    <!-- Float links to the right. Hide them on small screens -->
-  
-    <div class="w3-right w3-hide-small">
-        <a href="#home" class="w3-bar-item w3-button">Home</a>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="nav justify-content-end">
+        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">About</a>
+        <a class="nav-item nav-link" href="#">Find Businesses</a>
+        <a class="nav-item nav-link" href="#">Login/Register</a>
       </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="projName">She<br>Boss</h1>
+        <h2 class="subtitle">support women-owned businesses</h2>
+
+        <form class="form-inline search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Type in your city here" name="city" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Catergories</button>
+          <svg class="bi bi-search" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+          </svg>
+        </form>
+
       </div>
-  
-</div>
-{% endblock %}
+      <div class="col">
+        <img src="../static/friends.jpg" alt="landing image" id="landing-img">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
