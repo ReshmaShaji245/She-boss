@@ -1,4 +1,4 @@
-import os,csv
+import os
 
 from flask import Flask, session, render_template, request
 from flask_session import Session
@@ -22,6 +22,7 @@ Session(app)
 # Set up database
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
+<<<<<<< HEAD
 '''
 db.execute("INSERT INTO business (company, address, owner, website, category) VALUES (:company, :address, :owner, :website, :category)",
                 {"company": 'The Sill', 
@@ -31,6 +32,9 @@ db.execute("INSERT INTO business (company, address, owner, website, category) VA
                 "category": 'Home décor'})
 db.commit()
 '''
+=======
+
+>>>>>>> parent of 3616de2... included business database
 @app.route("/")
 def index():
     return render_template("index.html")
