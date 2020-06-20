@@ -22,7 +22,7 @@ Session(app)
 # Set up database
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
-
+'''
 db.execute("INSERT INTO business (company, address, owner, website, category) VALUES (:company, :address, :owner, :website, :category)",
                 {"company": 'The Sill', 
                 "address": '84 Hester Street, New York, NY',
@@ -30,7 +30,7 @@ db.execute("INSERT INTO business (company, address, owner, website, category) VA
                 "website": 'https://www.thesill.com/',
                 "category": 'Home décor'})
 db.commit()
-
+'''
 @app.route("/")
 def index():
     return render_template("index.html")
