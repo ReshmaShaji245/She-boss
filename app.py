@@ -31,6 +31,10 @@ def index():
 def homepage():
     return render_template("homepage.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/login", methods=["GET", "POST"])
 def check():
     session.clear()
