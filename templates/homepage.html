@@ -51,8 +51,8 @@
                   <label for="category-one">Food & Drink </label><br>
                   <input type="checkbox" id="category-two" name="category" value="Tech">
                   <label for="category-two">Tech</label><br>
-                  <input type="checkbox" id="category-three" name="category" value="Home-Services">
-                  <label for="category-three">Home Services</label><br> 
+                  <input type="checkbox" id="category-three" name="category" value="Home Décor">
+                  <label for="category-three">Home Décor</label><br> 
                   <input type="checkbox" id="category-four" name="category" value="Hair-and-Beauty">
                   <label for="category-four">Hair and Beauty</label><br> 
                   <input type="checkbox" id="category-five" name="category" value="Entertainment">
@@ -62,8 +62,8 @@
                   <input type="checkbox" id="category-seven" name="category" value="Real-Estate">
                   <label for="category-seven">Real Estate</label><br> 
         
-                  <input type="checkbox" id="category-eight" name="category" value="Education">
-                  <label for="category-eight">Education</label><br> 
+                  <input type="checkbox" id="category-eight" name="category" value="Books">
+                  <label for="category-eight">Books</label><br> 
                   
                   <div class = "modal-footer">
                     <button type="submit" class="btn">Save</button>
@@ -87,20 +87,22 @@
       </div>
     </div>
   </div>
-  <div class="card-group">
-    <div class="card border-dark ml-auto mb-6" style="max-width: 50rem;""">
-      <div class="card-body">
+  <div class="card-group;" style="align-items: center;">
+    <div class="card border-dark ml-auto mb-6" style="align-items: center;">
+      <div class="w3-container">
        
-          {% for i in business %}
-        <h5 class="card-title">Company Name {{i[0]}} </h5>
-        <p class="card-text">Address: {{i[1]}} </p>
-        <p class="card-text">Owner: {{i[2]}} </p>
-        <p class="card-text">Website: {{i[3]}} </p>
-        <p class="card-text">Category: {{i[4]}} </p>
+        {% for i in business %}
+        <h5 class="card-title">Company Name: <b> {{i[0]}} </b></h5>
+        <p class="card-text">Address: <b>{{i[1]}} </b></p>
+        <p class="card-text">Owner:<b> {{i[2]}}</b> </p>
+        <a href="{{i[3]}}" class="card-text"><b>Website </b></a>
+        <p class="card-text">Category:<b>{{i[4]}}</b>  </p>
+        <br><br>
         {% endfor %}
         
       </div>
     </div>
+    <!-- 
     <div class="card border-dark mr-auto mb-6" style="max-width: 50rem;"">
       <div class="card-body ">
     
@@ -114,7 +116,7 @@
         
       </div>
     </div>
- 
+  -->
   
   
 </div>
