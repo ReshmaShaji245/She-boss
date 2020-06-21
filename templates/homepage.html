@@ -87,6 +87,39 @@
       </div>
     </div>
   </div>
+  <div class="card-group">
+    <div class="card border-dark ml-auto mb-6" style="max-width: 50rem;""">
+      <div class="card-body">
+       
+          {% for i in business %}
+        <h5 class="card-title">Company Name {{i[0]}} </h5>
+        <p class="card-text">Address: {{i[1]}} </p>
+        <p class="card-text">Owner: {{i[2]}} </p>
+        <p class="card-text">Website: {{i[3]}} </p>
+        <p class="card-text">Category: {{i[4]}} </p>
+        {% endfor %}
+        
+      </div>
+    </div>
+    <div class="card border-dark mr-auto mb-6" style="max-width: 50rem;"">
+      <div class="card-body ">
+    
+        {% for i in business %}
+        <h5 class="card-title">Company Name {{i[0]}} </h5>
+        <p class="card-text">Address: {{i[1]}} </p>
+        <p class="card-text">Owner: {{i[2]}} </p>
+        <p class="card-text">Website: {{i[3]}} </p>
+        <p class="card-text">Category: {{i[4]}} </p>
+        {% endfor %}
+        
+      </div>
+    </div>
+ 
+  
+  
+</div>
+</div>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
