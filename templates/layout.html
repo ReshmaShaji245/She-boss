@@ -8,13 +8,21 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
 </head>
 <title>Hackathon</title>
 
 
 <!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-    <img src="/static/logos.png" alt="boat" style="width:100%;height: auto;">
+<div class="w3-display-container w3-animate-opacity" style="align-items: center;">
+    <img src="/static/friends.jpg" alt="boat" id='pic' style="width:50%;height: 500px;" class="center">
 </div>
 
     {% block content %}
