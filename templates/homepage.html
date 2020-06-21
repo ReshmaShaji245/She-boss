@@ -35,7 +35,7 @@
         <h1 class="projName">She<br>Boss</h1>
         <h2 class="subtitle">support women-owned businesses</h2>
 
-        <form class="form-inline search">
+        <form action="/categories" method="post" class="form-inline search">
           <input class="form-control mr-sm-2 ml-auto" type="search" placeholder="Type in your city here" name="city" aria-label="Search">
         
           <button class="btn btn-outline-secondary my-2 my-sm-0 ml-auto" type="button" data-toggle="modal" data-target="#myModal">Categories</button>
@@ -46,32 +46,30 @@
                   <h2> Categories</h2>
                 </div>
                <div class = "modal-body">
-               <form action="/categories" method="post" id="myForm">
-                <input type="checkbox" id="category-one" name="food-and-drink" value="Food-and-Drink">
-                <label for="category-one">Food & Drink </label><br>
-                <input type="checkbox" id="category-two" name="tech" value="Tech">
-                <label for="category-two">Tech</label><br>
-                <input type="checkbox" id="category-three" name="home-services" value="Home-Services">
-                <label for="category-three">Home Services</label><br> 
-                <input type="checkbox" id="category-four" name="hair-and-beauty" value="Hair-and-Beauty">
-                <label for="category-four">Hair and Beauty</label><br> 
-                <input type="checkbox" id="category-five" name="entertainment" value="Entertainment">
-                <label for="category-five">Entertainment</label><br> 
-                <input type="checkbox" id="category-six" name="retail" value="Retail">
-                <label for="category-six">Retail</label><br> 
-                <input type="checkbox" id="category-seven" name="real-estate" value="Real-Estate">
-                <label for="category-seven">Real Estate</label><br> 
-      
-                <input type="checkbox" id="category-eight" name="Education" value="Education">
-                <label for="category-eight">Education</label><br> 
-                
-                <div class = "modal-footer">
-                  <button class =" btn btn-primary">
-                    Save
-                  </button>
-                  <button type="button" class="close" data-dismiss="modal">
-                    <span>Cancel</span>
-          </form>
+             
+                  <input type="checkbox" id="category-one" name="category" value="Food-and-Drink">
+                  <label for="category-one">Food & Drink </label><br>
+                  <input type="checkbox" id="category-two" name="category" value="Tech">
+                  <label for="category-two">Tech</label><br>
+                  <input type="checkbox" id="category-three" name="category" value="Home-Services">
+                  <label for="category-three">Home Services</label><br> 
+                  <input type="checkbox" id="category-four" name="category" value="Hair-and-Beauty">
+                  <label for="category-four">Hair and Beauty</label><br> 
+                  <input type="checkbox" id="category-five" name="category" value="Entertainment">
+                  <label for="category-five">Entertainment</label><br> 
+                  <input type="checkbox" id="category-six" name="category" value="Retail">
+                  <label for="category-six">Retail</label><br> 
+                  <input type="checkbox" id="category-seven" name="category" value="Real-Estate">
+                  <label for="category-seven">Real Estate</label><br> 
+        
+                  <input type="checkbox" id="category-eight" name="category" value="Education">
+                  <label for="category-eight">Education</label><br> 
+                  
+                  <div class = "modal-footer">
+                    <button type="submit" class="btn">Save</button>
+                    <button type="button"  class="close" data-dismiss="modal">
+                      <span>Cancel</span>
+               
                 </div>
                </div>
               </div>
