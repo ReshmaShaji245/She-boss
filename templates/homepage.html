@@ -88,19 +88,20 @@
     </div>
   </div>
   <div class="card-group;" style="align-items: center;">
+    {% for i in business %}
     <div class="card border-dark ml-auto mb-6" style="align-items: center;">
-      <div class="w3-container">
        
-        {% for i in business %}
+      <br><br>
         <h5 class="card-title">Company Name: <b> {{i[0]}} </b></h5>
         <p class="card-text">Address: <b>{{i[1]}} </b></p>
         <p class="card-text">Owner:<b> {{i[2]}}</b> </p>
         <a href="{{i[3]}}" class="card-text"><b>Website </b></a>
         <p class="card-text">Category: <b>{{i[4]}}</b>  </p>
         <br><br>
-        {% endfor %}
+        
         
       </div>
+      {% endfor %}
     </div>
     <!-- 
     <div class="card border-dark mr-auto mb-6" style="max-width: 50rem;"">
