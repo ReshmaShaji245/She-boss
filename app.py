@@ -95,7 +95,7 @@ def categories():
 
 @app.route("/temp")
 def temp():
-    return render_template('temp.html')
+    return render_template('review.html')
 @app.route("/review", methods=["GET", "POST"])
 def review():
     if request.method == 'POST':
@@ -104,11 +104,15 @@ def review():
         rating = request.form.get('rating')
         review = request.form.get('comments')
 
-        if customer == '' or company == '':
+        if customer == '' or company == '' or review== '':
             return render_template('review.html', message='Please enter required fields')
         else:
-            db.execute("INSERT INTO reviews (username, company, review, rating) VALUES (:username, :company, :review, :rating)",
+            db.execute("INSERT INTO reviews username, company, review, rating) VALUES (:username, :company, :review, :rating)",
               {"username": customer, "company": company, "review": review, "rating": rating})
             db.commit()
-            return render_template('done.html')
-        return render_template('review.html', message='You have already submitted the review')
+    exsitreviews=list(db.execute("SELECT username, company, review, rating FROM reviews").fetchall())
+    allreviews=[]
+    for i in exsitreviews:
+        allreviews+=[list(i)]
+    print(allreviews)
+    return render_template('review.html', review=allreviews)
