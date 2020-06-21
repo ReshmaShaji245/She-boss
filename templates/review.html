@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>You can write all your reviews here</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Russo+One&family=Saira+Condensed&display=swap" rel="stylesheet">
+  
+  </head>
+  <body>
+    <br></br>
+    <h2> <center> Feedback Form</h2></center>
+    <br></br>
+    <br></br>
+    <div class="container">
+
+      <form action="/review" method="POST">
+        <div class="form-group row">
+            <label class="col-sm-3" col-form-label><h3>UserName</h3></label>
+            <div class="col-md-9">
+          <input
+            type="text"
+            name='username'
+            class="form-control"
+          />
+          </div>
+        </div>
+        <div class="container">
+          <form action="/review" method="POST">
+           <div class="form-group row">
+            <label class="col-sm-3" col-form-label><h3>Company</h3></label>
+            <div class="col-md-9">
+             <input
+               type="text"
+               name='company'
+               class="form-control"
+          />
+        </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3" col-form-label><h3>Please rate Company</h3></label>
+            <div class="col-md-9 form-check-inline  offset-sm-3">
+          <input type="radio" name="rating" value="1" class="form-control" /> 1
+          <input type="radio" name="rating" value="2" class="form-control" /> 2
+          <input type="radio" name="rating" value="3" class="form-control" /> 3
+          <input type="radio" name="rating" value="4" class="form-control"/> 4
+          <input type="radio" name="rating" value="5" class="form-control" checked /> 5
+        </div>
+        </div>
+
+        <div class="form-group row col-sm-9">
+            <label class="col-sm-3" col-form-label><h3>Comments</h3></label>
+          <textarea
+            name="comments"
+            id=""
+            cols="65"
+            rows="10"
+            placeholder="Tell us what you liked and/or did not like"
+          ></textarea>
+        
+        </div>
+        <div class="row">
+            <div class="col-sm-9 offset-sm-11">
+                <input type="submit" value="Submit" class="btn btn-danger" class="form-control" />
+             </div>
+        
+      </form>
+       </div>
+      </div>
+  </body>
+</html>
