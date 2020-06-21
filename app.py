@@ -35,7 +35,6 @@ def check():
     h = hashlib.md5(password.encode())
     password=h.hexdigest()
     exsitusers=list(db.execute("SELECT username,password FROM users").fetchall())
-    print(username,password)
   
     if (username,password) in exsitusers:
              return render_template("homepage.html")
@@ -73,3 +72,15 @@ def register():
 def signout():
     session.clear()
     return render_template("index.html")
+
+@app.route("/business")
+def business():
+    business=[['Atla', '372 Lafayette St', 'Daniela Soto-Innes', 'https://www.atlanyc.com/', 'Food'], ['Atoboy and Atomix', '43 E. 28th St, New York, NY', 'Ellia Park', 'https://www.atomixnyc.com/ ', 'Food'], ['Ayada', '7708 Woodside Ave, New York, NY', 'Duanjai Thammasat', 'https://ayadathai.com/', 'Food'], ['Baoburg', '614 Manhattan Ave Brooklyn', 'Suchanan Aksornnan', 'http://www.baoburg.com/ ', 'Food'], ['CAP Beauty', '238 West 10 St, New York"', 'Chloe Kernaghan', 'https://www.capbeauty.com/', 'Beauty'], ['The Sill', '84 Hester Street, New York, NY', 'Eliza Blank', 'https://www.thesill.com/ ', 'Home décor'], ['McNally Jackson', '52 Prince St, New York, NY', 'Sarah McNally', 'https://www.mcnallyjackson.com/', 'Books'], ['Frankie', '100 Stanton St , New York, NY', 'Gaelle Drevet', 'https://thefrankieshop.com/', 'Clothes + Home décor '], ['Maryam Nassir Zadeh', '123 Norfolk St, New York, NY', 'Maryam Nassir Zadeh', 'https://mnzstore.com/', 'Clothes']]
+    return render_template("index.html", business)
+
+@app.route("/categories", methods=["GET", "POST"])
+def categories():
+   # names = request.form.get("category")
+    names=request.form.getlist("category")
+    print(names)
+    return render_template('temp.html')
