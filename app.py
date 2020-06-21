@@ -28,7 +28,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/homepage")
-def index():
+def homepage():
     return render_template("homepage.html")
 
 @app.route("/login", methods=["GET", "POST"])
