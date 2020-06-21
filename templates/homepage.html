@@ -19,11 +19,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="nav justify-content-end">
-        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">About</a>
-        <a class="nav-item nav-link" href="#">Find Businesses</a>
-      </div>
+      Welcome! 
+<div class="nav justify-content-end ml-auto">
+  <a class="nav-item nav-link" href="#">About<span class="sr-only">(current)</span></a>
+  <a class="nav-item nav-link" href="#">Find Businesses</a>
+  <a class="nav-item nav-link" href="#">Sign Out</a>
+</div>
+
     </div>
   </nav>
 
@@ -34,8 +36,46 @@
         <h2 class="subtitle">support women-owned businesses</h2>
 
         <form class="form-inline search">
-          <input class="form-control mr-sm-2" type="search" placeholder="Type in your city here" name="city" aria-label="Search">
-          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Catergories</button>
+          <input class="form-control mr-sm-2 ml-auto" type="search" placeholder="Type in your city here" name="city" aria-label="Search">
+        
+          <button class="btn btn-outline-secondary my-2 my-sm-0 ml-auto" type="button" data-toggle="modal" data-target="#myModal">Categories</button>
+          <div class ="modal" id ="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2> Categories</h2>
+                </div>
+               <div class = "modal-body">
+                <input type="checkbox" id="category-one" name="food-and-drink" value="Food-and-Drink">
+                <label for="category-one">Food & Drink </label><br>
+                <input type="checkbox" id="category-two" name="tech" value="Tech">
+                <label for="category-two">Tech</label><br>
+                <input type="checkbox" id="category-three" name="home-services" value="Home-Services">
+                <label for="category-three">Home Services</label><br> 
+                <input type="checkbox" id="category-four" name="hair-and-beauty" value="Hair-and-Beauty">
+                <label for="category-four">Hair and Beauty</label><br> 
+                <input type="checkbox" id="category-five" name="entertainment" value="Entertainment">
+                <label for="category-five">Entertainment</label><br> 
+                <input type="checkbox" id="category-six" name="retail" value="Retail">
+                <label for="category-six">Retail</label><br> 
+                <input type="checkbox" id="category-seven" name="real-estate" value="Real-Estate">
+                <label for="category-seven">Real Estate</label><br> 
+      
+                <input type="checkbox" id="category-eight" name="Education" value="Education">
+                <label for="category-eight">Education</label><br> 
+                
+                <div class = "modal-footer">
+                  <button class =" btn btn-primary">
+                    Save
+                  </button>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span>Cancel</span>
+
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
           <svg class="bi bi-search" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
             <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
