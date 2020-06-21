@@ -1,48 +1,48 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/static/style2.css">
+<style>
+  .body{
+    padding-left: 30%;
+  }
+</style>
 
 
-
-<title>She boss</title>
+<title>She Boss</title>
 {% extends "layout.html" %}
 {% block content %}
-
-<div class="container">
-  
-
 <div style="color: red; padding-left: 10px;">
   <h6>{{ alert }}</h6>
 </div>
-<div>
+
 <form class="w3-container" action="/login" method="post" id="myForm">
-    <h1>Login</h1>
+  <h1>Login</h1>
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+  <label for="username"><b>Username</b></label>
+  <input type="text" placeholder="Enter Username" name="username" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+  <label for="psw"><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="password" required>
 
-    <button type="submit" class="btn" >Login</button>
+  <button type="submit" class="btn" >Login</button>
 </form>
 
 
 
+
 <div style="text-align:center">
-<h6> <a href="/register" class="w3-bar-item w3-button">Don't have an account? Register here!</a></h6>
-</div>
-</div>
-<!-- Navbar -->
-<div>
-  <div class="w3-top" style="background-color:#00B4CC;">
-    <!-- Float links to the right. Hide them on small screens -->
-    
- 
-    <div class="w3-right w3-hide-small">
-      <a href="/login" id="login" class="w3-bar-item w3-button">Login</a>
-      <a href="/register"  class="w3-bar-item w3-button">Register</a>
-      </div>
+  <h6> <a href="/register" class="w3-bar-item w3-button">Don't have an account? Register here!</a></h6>
+  </div>
+  </div>
+  <!-- Navbar -->
+  <div>
+    <div class="w3-top" style="background-color:#00B4CC;">
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="/login" id="login" class="w3-bar-item w3-button">Login</a>
+        <a href="/register" id="login" class="w3-bar-item w3-button">Register</a>
+        </div>
+    </div>
   </div>
 
 
