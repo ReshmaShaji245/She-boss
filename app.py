@@ -115,7 +115,7 @@ def review():
         if customer == '' or company == '' or review== '':
             return render_template('review.html', message='Please enter required fields')
         else:
-            db.execute("INSERT INTO reviews username, company, review, rating) VALUES (:username, :company, :review, :rating)",
+            db.execute("INSERT INTO reviews (username, company, review, rating) VALUES (:username, :company, :review, :rating)",
               {"username": customer, "company": company, "review": review, "rating": rating})
             db.commit()
     exsitreviews=list(db.execute("SELECT username, company, review, rating FROM reviews").fetchall())
