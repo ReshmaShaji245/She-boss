@@ -50,8 +50,7 @@ def register():
     username=request.form.get("username")
     password=str(request.form.get("password"))
     if len(password)<=6:
-        alert='Password must be six characters. Please try another password.'
-        return render_template("register.html",alert=alert)
+        return render_template("register.html")
     exsitusers=list(db.execute("SELECT username FROM users").fetchall())
     lenU=len(exsitusers)
     h = hashlib.md5(password.encode())
@@ -93,3 +92,23 @@ def categories():
                     
         print(z)
         return render_template("homepage.html",business= z)       
+
+@app.route("/temp")
+def temp():
+    return render_template('temp.html')
+@app.route("/review", methods=["GET", "POST"])
+def review():
+    if request.method == 'POST':
+        customer = request.form.get('username')
+        company = request.form.get('company')
+        rating = request.form.get('rating')
+        review = request.form.get('comments')
+
+        if customer == '' or company == '':
+            return render_template('review.html', message='Please enter required fields')
+        else:
+            db.execute("INSERT INTO reviews (username, company, review, rating) VALUES (:username, :company, :review, :rating)",
+              {"username": customer, "company": company, "review": review, "rating": rating})
+            db.commit()
+            return render_template('done.html')
+        return render_template('review.html', message='You have already submitted the review')
