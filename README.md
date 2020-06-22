@@ -1,2 +1,2 @@
 # She Boss
-### Project for Hack Girl Summer || won Best Gender Equality Hack
+### Project for Hack Girl Summer. Won Best Gender Equality Hack
