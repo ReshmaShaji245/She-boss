@@ -1,6 +1,7 @@
 # She Boss
 ### Project for Hack Girl Summer. Won Best Gender Equality Hack. 
 [She boss Website](https://she-boss.herokuapp.com/)
+[YouTube Demo](https://www.youtube.com/watch?v=a7AE1rkj16I)
 
 ## Inspiration 
 There is no limit to what we, as women can accomplish. So it is the duty of every woman to support each other, empower each other, and help each other rise. At this time of the crisis, we believe that our small endeavour could support other women and help everyone stay safe and happy at their homes, while help them buy things they need.
