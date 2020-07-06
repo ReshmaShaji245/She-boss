@@ -1,6 +1,6 @@
 # She Boss
 ### Project for Hack Girl Summer. Won Best Gender Equality Hack. 
-[She boss Website](https://she-boss.herokuapp.com/)
+[She boss Website](https://she-boss.herokuapp.com/)\
 [YouTube Demo](https://www.youtube.com/watch?v=a7AE1rkj16I)
 
 ## Inspiration 
